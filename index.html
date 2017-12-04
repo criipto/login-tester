@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdn.auth0.com/js/lock-8.1.min.js"></script>
+
+        <script src="//use.typekit.net/iws6ohy.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- font awesome from BootstrapCDN -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="auth0-variables.js"> </script>
+        <script src="app.js"> </script>
+        <link href="app.css" rel="stylesheet">
+    </head>
+    <body class="home">
+        <div class="container">
+            <div class="login-page clearfix">
+              <div class="login-box auth0-box before">
+                <img src="https://cldup.com/V3v9s7azRU.png" />
+                <h2>Login tester</h2>
+                <p>Sign in to verify that your setup works.</p>
+                <p>If you use ADFS or similar, type your email address in the Email field. 
+                    You will then be redirected to your server to log in.
+                </p>
+                <a ng-click="login()" class="btn btn-primary btn-lg btn-dev-login">Development: Sign In</a>&nbsp;&nbsp;
+                <a ng-click="login()" class="btn btn-primary btn-lg btn-prod-login">Production: Sign In</a>
+            </div>
+              <div class="logged-in-box auth0-box logged-in" style="display: none;">
+                <h2>Welcome <span class="fullname"></span></h2>
+                <table>
+                    <tr>
+                        <td>Name</td><td class="user-name"></td>
+                    </tr>
+                    <tr>
+                        <td>User ID</td><td class="user-id"></td>
+                    </tr>
+                    <tr>
+                        <td>SSN</td><td class="user-ssn"></td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
